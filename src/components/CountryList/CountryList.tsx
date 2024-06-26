@@ -41,7 +41,7 @@ const CountryList = () => {
           <li key={country.name.common}
           onClick={() => handleChangeCountry(country)}
           >
-            <CountryCard  />
+            <CountryCard country={country}  />
           </li>
         )
         })}
@@ -54,7 +54,7 @@ const CountryList = () => {
     <li key={country.name.common}
     onClick={() => handleChangeCountry(country)}
     >
-      <CountryCard  />
+      <CountryCard country={country} />
     </li>
       )
   }) }

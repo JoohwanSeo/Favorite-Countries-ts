@@ -13,3 +13,4 @@ export type CountriesInfo = {
 
     checked: boolean
 }  
+
