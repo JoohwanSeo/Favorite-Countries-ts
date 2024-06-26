@@ -1,7 +1,7 @@
 import axios, {AxiosInstance} from "axios"
 import CountryAPI from "./countryApi"
 
-const BASE_URL = 'https://restcountries.com/v3.1/all'    
+const BASE_URL = 'https://restcountries.com/v3.1'    
 
 class API {
     private client: AxiosInstance

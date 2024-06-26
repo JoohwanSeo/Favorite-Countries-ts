@@ -3,8 +3,9 @@ export type CountriesInfo = {
         common: string;
         official: string
     }
+
     capital: string[]
-    
+
     flags: {
         png: string,
         svg: string

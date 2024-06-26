@@ -1,4 +1,4 @@
-import React from 'react'
+import CountryList from './components/CountryList'
 
 const App = () => {
 
@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <div >
-      클릭
+      <CountryList />
     </div>
   )
 }
