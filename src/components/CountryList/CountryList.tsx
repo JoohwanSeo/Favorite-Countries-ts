@@ -26,28 +26,28 @@ const CountryList = () => {
 
   if(checkedCountry) {
     return (
-      <div> ...is Pending </div>
+      <div className='text-6xl'> ...is Pending </div>
     )
   }
 
 
   return (
     <>
-      <h2 className="font-bold mb-4">Favorite Countries</h2>
+      <h2 className="mt-8 mb-4 font-bold text-4xl  ">Favorite Countries</h2>
       <ul className="grid grid-cols-4 gap-4">
         {countries.map((country) => {
           if(country.checked)
             return (
           <li key={country.name.common}
           onClick={() => handleChangeCountry(country)}
-          className="p-4 shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer bg-white rounded-lg"
+          className="p-4 shadow-md hover:shadow-lg transition-shadow cursor-pointer bg-white rounded-lg"
           >
             <CountryCard country={country}  />
           </li>
         )
         })}
       </ul>
-      <h2 className="font-bold mt-8 mb-4">Countries</h2>
+      <h2 className="font-bold mt-8 mb-4 text-4xl">Countries</h2>
 <ul className="grid grid-cols-4 gap-4">
   {countries.map((country) => {
     if(!country.checked)

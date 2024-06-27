@@ -3,7 +3,7 @@ import ToggleBtn from './components/DarkMode/ToggleBtn';
 
 const App = () => {
   return (
-    <div className="flex justify-between items-center min-w-[400px]">
+    <div className="flex-directionL row justify items-center min-w-[400px]">
       <ToggleBtn />
       <CountryList />
     </div>
