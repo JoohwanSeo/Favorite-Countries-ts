@@ -1,15 +1,13 @@
-import CountryList from './components/CountryList'
+import CountryList from './components/CountryList';
+import ToggleBtn from './components/DarkMode/ToggleBtn';
 
 const App = () => {
-
-
-
-
   return (
-    <div >
+    <div className="flex justify-between items-center min-w-[400px]">
+      <ToggleBtn />
       <CountryList />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

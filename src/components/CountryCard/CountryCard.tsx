@@ -4,8 +4,8 @@ const CountryCard = ({ country }: { country: CountriesInfo }) => {
   return (
     <>
       <img src={country.flags.png} alt="이미지 오류" />
-      <h3>{country.name.common}</h3>
-      <p>{country.capital}</p>
+      <h3 className="text-black">{country.name.common}</h3>
+      <p className="text-black">{country.capital}</p>
     </>
   );
 };
