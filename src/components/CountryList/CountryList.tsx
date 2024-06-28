@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { CountriesInfo } from '../../types/country.type';
 import api from '../../api/api';
 import CountryCard from '../CountryCard';
+import ToggleBtn from '../DarkMode/ToggleBtn';
 
 const CountryList = () => {
   const [countries, setCountries] = useState<CountriesInfo[]>([]);
@@ -29,6 +30,7 @@ const CountryList = () => {
 
   return (
     <>
+    <ToggleBtn />
       <h2 className="mt-8 mb-4 font-bold text-4xl  ">Favorite Countries</h2>
       <ul className="grid grid-cols-4 gap-4">
         {countries.map(country => {
