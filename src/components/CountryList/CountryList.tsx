@@ -10,17 +10,27 @@ const CountryList = () => {
 
   useEffect(() => {
     const fetchCountries = async () => {
+       
+
       const getCountryData = await api.country.getCountry();
-      setCountries(getCountryData || []);
+      // sort 매서드로 알파벳 순으로 배열 정렬
+      const sortedCountries = getCountryData?.sort((a, b) => {
+        if (a.name.common < b.name.common) return -1;
+        if (a.name.common > b.name.common) return 1;
+        return 0;
+      });
+      setCountries(sortedCountries || []);
       setCheckedCountry(false);
     };
     fetchCountries();
   }, []);
 
   const handleChangeCountry = (country: CountriesInfo) => {
-    const clickedCountry = countries.map(prevCountry =>
+    const clickedCountry = countries.map((prevCountry) =>
+      // filter 매서드 대신 삼항연산자를 사용하여 구현
       prevCountry.name.common === country.name.common ? { ...prevCountry, checked: !prevCountry.checked } : prevCountry,
     );
+
     setCountries(clickedCountry);
   };
 
